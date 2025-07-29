@@ -54,7 +54,7 @@ export function ProjectsSection() {
             A glimpse into the applications I've built and designed.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
