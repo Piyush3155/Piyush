@@ -2,9 +2,11 @@
 
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
+import { useTheme } from 'next-themes';
 
 const ThreeDSpace = () => {
   const mountRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (!mountRef.current) return;
@@ -31,8 +33,10 @@ const ThreeDSpace = () => {
     const starGeometry = new THREE.BufferGeometry();
     starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
     
+    const starColor = theme === 'light' ? 0x1a1a1a : 0xaaaaaa; // gray-900 for light, original for dark
+
     const starMaterial = new THREE.PointsMaterial({ 
-        color: 0xaaaaaa,
+        color: starColor,
         size: 0.7,
         transparent: true
     });
@@ -73,11 +77,11 @@ const ThreeDSpace = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
       document.removeEventListener('mousemove', onMouseMove);
-      if (currentMount) {
+      if (currentMount && renderer.domElement.parentNode === currentMount) {
         currentMount.removeChild(renderer.domElement);
       }
     };
-  }, []);
+  }, [theme]);
 
   return <div ref={mountRef} className="fixed top-0 left-0 w-full h-full -z-10" />;
 };
