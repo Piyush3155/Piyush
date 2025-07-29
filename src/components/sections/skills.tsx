@@ -1,13 +1,12 @@
+'use client';
+
 import React from 'react';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from '@/components/ui/carousel';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import Autoplay from 'embla-carousel-autoplay';
 
 const skills = [
   {
@@ -61,6 +60,10 @@ const skills = [
 ];
 
 export function SkillsSection() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
+
   return (
     <section id="skills" className="py-16 md:py-24">
       <div className="container mx-auto">
@@ -69,30 +72,24 @@ export function SkillsSection() {
           <p className="mt-4 text-lg text-muted-foreground">A constellation of my skills and technologies.</p>
         </div>
         <Carousel
+          plugins={[plugin.current]}
           opts={{
             align: 'start',
             loop: true,
           }}
           className="w-full max-w-4xl mx-auto"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
         >
           <CarouselContent>
             {skills.map((skill, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
-                <div className="p-1">
-                  <Card className="bg-card/50 backdrop-blur-sm border-border/50 transition-all hover:border-accent hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-1 h-full">
-                    <CardContent className="flex flex-col items-center justify-center p-6 aspect-square">
-                      {skill.icon}
-                      <Badge variant="secondary" className="mt-4 text-lg bg-primary/50 text-primary-foreground hover:bg-primary/80">
-                        {skill.name}
-                      </Badge>
-                    </CardContent>
-                  </Card>
+                <div className="flex items-center justify-center aspect-square">
+                  {React.cloneElement(skill.icon, { className: 'w-12 h-12 text-accent' })}
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
         </Carousel>
       </div>
     </section>
