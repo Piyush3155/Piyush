@@ -77,15 +77,16 @@ export function SkillsSection() {
             align: 'start',
             loop: true,
           }}
-          className="w-full max-w-4xl mx-auto"
+          className="w-full max-w-xs mx-auto"
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
           <CarouselContent>
             {skills.map((skill, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
-                <div className="flex items-center justify-center aspect-square">
+              <CarouselItem key={index}>
+                <div className="flex flex-col items-center justify-center p-6 aspect-square">
                   {React.cloneElement(skill.icon, { className: 'w-12 h-12 text-accent' })}
+                  <p className="mt-4 font-semibold text-center">{skill.name}</p>
                 </div>
               </CarouselItem>
             ))}
