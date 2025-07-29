@@ -3,7 +3,6 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { AiOptimizer } from './ai-optimizer';
 import { Menu } from 'lucide-react';
 import {
   Sheet,
@@ -63,7 +62,6 @@ export function AppHeader() {
                   </Button>
                 ))}
               </nav>
-              <AiOptimizer />
               <ThemeToggle />
           </div>
           <div className="sm:hidden">
@@ -96,7 +94,6 @@ export function AppHeader() {
                 </nav>
                 <Separator className="my-4" />
                 <div className="grid gap-4 py-2">
-                    <div onClick={handleLinkClick}><AiOptimizer /></div>
                     <ThemeToggle />
                 </div>
               </SheetContent>
