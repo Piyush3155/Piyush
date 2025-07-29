@@ -6,9 +6,13 @@ import { Menu } from 'lucide-react';
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { ThemeToggle } from './theme-toggle';
+import { Separator } from './ui/separator';
 
 export function AppHeader() {
   const navLinks = [
@@ -63,23 +67,29 @@ export function AppHeader() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
-                <nav className="grid gap-4 py-6">
+                <SheetHeader>
+                  <SheetTitle>Navigation</SheetTitle>
+                  <SheetDescription>
+                    Explore the sections of my portfolio.
+                  </SheetDescription>
+                </SheetHeader>
+                <Separator className="my-4" />
+                <nav className="grid gap-4 py-2">
                   {navLinks.map((link) => (
                     <a
                       key={link.href}
                       href={link.href}
-                      className="text-lg font-medium text-foreground hover:text-accent"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-muted"
                     >
                       {link.name}
                     </a>
                   ))}
-                  <div className="mt-4">
-                    <AiOptimizer />
-                  </div>
-                   <div className="mt-4">
-                    <ThemeToggle />
-                  </div>
                 </nav>
+                <Separator className="my-4" />
+                <div className="grid gap-4 py-2">
+                    <AiOptimizer />
+                    <ThemeToggle />
+                </div>
               </SheetContent>
             </Sheet>
           </div>
