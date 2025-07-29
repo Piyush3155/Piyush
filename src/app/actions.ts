@@ -26,7 +26,7 @@ const portfolioData: OptimizePortfolioLayoutInput = {
     'OOPS concept',
     'MySQL',
   ],
-  experience: `Web Developer Intern at Playtech (Feb 2025 - Present). Contributed to real-world projects like Electronic Medical Records, Restaurant Management System, and Auto Sales Dashboard. Built full-stack web apps with features like role-based access, analytics dashboards, and real-time data handling. Tech used: Next.js, TypeScript, MySQL, Prisma, Tailwind CSS, PHP.`,
+  experience: `Web Developer at Playtech (August 2025 - Present). Web Developer Intern at Playtech (Feb 2025 - July 2025). Contributed to real-world projects like Electronic Medical Records, Restaurant Management System, and Auto Sales Dashboard. Built full-stack web apps with features like role-based access, analytics dashboards, and real-time data handling. Tech used: Next.js, TypeScript, MySQL, Prisma, Tailwind CSS, PHP.`,
   projects: [
     'TAXI BOOKING APPLICATION DESIGN: Designed a user-friendly taxi booking application using Figma. Created a visually appealing and interactive interface. Designed a taxi booking app prototype with 10+ interactive screens, improving user engagement.',
     'E-COMMERCE WEBSITE: Developed a functional e-commerce website using HTML, CSS, and JavaScript. Implemented features like user registration, login, and product listing.',

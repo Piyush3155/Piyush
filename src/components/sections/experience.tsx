@@ -5,9 +5,20 @@ import { Briefcase, GraduationCap } from 'lucide-react';
 const experience = [
   {
     icon: <Briefcase className="h-5 w-5" />,
+    role: 'Web Developer',
+    company: 'Playtech',
+    period: 'August 2025 - Present',
+    description: [
+      'Continuing to build and maintain full-stack web applications.',
+      'Leading development on new features and mentoring junior developers.',
+      'Focusing on performance optimization and scalability.'
+    ],
+  },
+  {
+    icon: <Briefcase className="h-5 w-5" />,
     role: 'Web Developer Intern',
     company: 'Playtech',
-    period: 'Feb 2025 - Present',
+    period: 'Feb 2025 - July 2025',
     description: [
       'Contributed to real-world projects like Electronic Medical Records, Restaurant Management System, and Auto Sales Dashboard.',
       'Built full-stack web apps with features like role-based access, analytics dashboards, and real-time data handling.',
