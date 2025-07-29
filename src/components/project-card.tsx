@@ -40,6 +40,7 @@ export function ProjectCard({
 }: ProjectCardProps) {
     const [api, setApi] = React.useState<CarouselApi>();
     const [current, setCurrent] = React.useState(0);
+    const cardRef = React.useRef<HTMLDivElement>(null);
   
     React.useEffect(() => {
       if (!api) {
@@ -56,8 +57,28 @@ export function ProjectCard({
     const scaleFactor = 0.2;
     const rotateFactor = -15;
 
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (!cardRef.current) return;
+        const { left, top, width, height } = cardRef.current.getBoundingClientRect();
+        const x = e.clientX - left;
+        const y = e.clientY - top;
+        const rotateX = (y / height - 0.5) * -20;
+        const rotateY = (x / width - 0.5) * 20;
+        cardRef.current.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+    };
+    
+    const handleMouseLeave = () => {
+        if (!cardRef.current) return;
+        cardRef.current.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+    };
+
   return (
-    <div className="flex flex-col h-full">
+    <div 
+        ref={cardRef}
+        className="flex flex-col h-full preserve-3d transition-transform duration-300 ease-out"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+    >
         <div className="relative w-full max-w-lg mx-auto mb-8">
             <Carousel setApi={setApi} className="w-full embla" opts={{ loop: true, align: 'center' }}>
                 <CarouselContent className="-ml-4 embla__container">

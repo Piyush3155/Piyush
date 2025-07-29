@@ -84,6 +84,10 @@ body {
   animation: scroll 20s linear infinite;
 }
 
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
 /* Styles for 3D Carousel */
 .embla {
   perspective: 1000px;
