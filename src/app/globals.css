@@ -83,3 +83,26 @@ body {
 .animate-scroll {
   animation: scroll 20s linear infinite;
 }
+
+/* Styles for 3D Carousel */
+.embla {
+  perspective: 1000px;
+}
+
+.embla__viewport {
+  overflow: visible;
+}
+
+.embla__container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.embla__slide {
+  flex: 0 0 80%;
+  min-width: 0;
+  position: relative;
+  transition: transform 0.5s ease;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
