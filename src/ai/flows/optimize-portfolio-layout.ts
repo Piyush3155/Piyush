@@ -60,7 +60,12 @@ const optimizePortfolioLayoutFlow = ai.defineFlow(
     outputSchema: OptimizePortfolioLayoutOutputSchema,
   },
   async input => {
-    const {output} = await prompt(input);
+    const {output} = await ai.generate({
+      prompt: {
+        ...prompt,
+        input,
+      },
+    });
     return output!;
   }
 );
