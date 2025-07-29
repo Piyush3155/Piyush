@@ -1,5 +1,7 @@
 
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { AiOptimizer } from './ai-optimizer';
 import { Menu } from 'lucide-react';
@@ -15,12 +17,18 @@ import { ThemeToggle } from './theme-toggle';
 import { Separator } from './ui/separator';
 
 export function AppHeader() {
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+
   const navLinks = [
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  const handleLinkClick = () => {
+    setIsSheetOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -59,7 +67,7 @@ export function AppHeader() {
               <ThemeToggle />
           </div>
           <div className="sm:hidden">
-            <Sheet>
+            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
                   <Menu className="h-6 w-6" />
@@ -79,6 +87,7 @@ export function AppHeader() {
                     <a
                       key={link.href}
                       href={link.href}
+                      onClick={handleLinkClick}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-muted"
                     >
                       {link.name}
@@ -87,7 +96,7 @@ export function AppHeader() {
                 </nav>
                 <Separator className="my-4" />
                 <div className="grid gap-4 py-2">
-                    <AiOptimizer />
+                    <div onClick={handleLinkClick}><AiOptimizer /></div>
                     <ThemeToggle />
                 </div>
               </SheetContent>
