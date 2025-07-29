@@ -56,7 +56,7 @@ const skills = [
 const SkillsListContent = () => (
     <>
         {skills.map((skill, index) => (
-            <li key={index} className="flex-shrink-0 mx-4">
+            <li key={index} className="flex items-center justify-center flex-shrink-0 mx-8">
                 {React.cloneElement(skill.icon, { className: 'w-12 h-12 text-accent' })}
             </li>
         ))}
@@ -72,7 +72,7 @@ export function SkillsSection() {
           <p className="mt-4 text-lg text-muted-foreground">A constellation of my skills and technologies.</p>
         </div>
         <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear_gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-            <ul className="flex items-center justify-center md:justify-start animate-scroll">
+            <ul className="flex items-center justify-center animate-scroll">
                 <SkillsListContent />
                 <SkillsListContent />
             </ul>
