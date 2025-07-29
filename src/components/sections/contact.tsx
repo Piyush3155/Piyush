@@ -87,7 +87,7 @@ export function ContactSection() {
                             <FormItem>
                             <FormLabel>Name</FormLabel>
                             <FormControl>
-                                <Input placeholder="Your Name" {...field} disabled={isLoading} />
+                                <Input placeholder="Your Name" {...field} disabled={isLoading} className="bg-background/80"/>
                             </FormControl>
                             <FormMessage />
                             </FormItem>
@@ -100,7 +100,7 @@ export function ContactSection() {
                             <FormItem>
                             <FormLabel>Email</FormLabel>
                             <FormControl>
-                                <Input type="email" placeholder="your.email@example.com" {...field} disabled={isLoading} />
+                                <Input type="email" placeholder="your.email@example.com" {...field} disabled={isLoading} className="bg-background/80"/>
                             </FormControl>
                             <FormMessage />
                             </FormItem>
@@ -113,7 +113,7 @@ export function ContactSection() {
                             <FormItem>
                             <FormLabel>Message</FormLabel>
                             <FormControl>
-                                <Textarea placeholder="Your message..." className="min-h-[120px]" {...field} disabled={isLoading} />
+                                <Textarea placeholder="Your message..." className="min-h-[120px] bg-background/80" {...field} disabled={isLoading} />
                             </FormControl>
                             <FormMessage />
                             </FormItem>

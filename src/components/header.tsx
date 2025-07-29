@@ -1,6 +1,12 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { AiOptimizer } from './ai-optimizer';
+import { Menu } from 'lucide-react';
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 export function AppHeader() {
   const navLinks = [
@@ -44,6 +50,32 @@ export function AppHeader() {
                 ))}
               </nav>
               <AiOptimizer />
+          </div>
+          <div className="sm:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Toggle Menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right">
+                <nav className="grid gap-4 py-6">
+                  {navLinks.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      className="text-lg font-medium text-foreground hover:text-accent"
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                  <div className="mt-4">
+                    <AiOptimizer />
+                  </div>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>

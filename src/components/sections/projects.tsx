@@ -40,7 +40,7 @@ export function ProjectsSection() {
             <Card key={project.title} className="flex flex-col bg-card/50 backdrop-blur-sm border-border/50 transition-all hover:border-accent hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-1">
               <CardHeader>
                 <CardTitle className="font-headline text-xl">{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
+                <CardDescription className="mt-2">{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
                 <div className="flex flex-wrap gap-2">
