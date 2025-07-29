@@ -1,11 +1,13 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { AiOptimizer } from './ai-optimizer';
 
 export function AppHeader() {
   const navLinks = [
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -33,13 +35,16 @@ export function AppHeader() {
           </a>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
-          <nav className="hidden sm:flex items-center space-x-2">
-            {navLinks.map((link) => (
-              <Button key={link.href} variant="ghost" asChild>
-                <a href={link.href}>{link.name}</a>
-              </Button>
-            ))}
-          </nav>
+           <div className="hidden sm:flex items-center gap-4">
+              <nav className="flex items-center space-x-2">
+                {navLinks.map((link) => (
+                  <Button key={link.href} variant="ghost" asChild>
+                    <a href={link.href}>{link.name}</a>
+                  </Button>
+                ))}
+              </nav>
+              <AiOptimizer />
+          </div>
         </div>
       </div>
     </header>

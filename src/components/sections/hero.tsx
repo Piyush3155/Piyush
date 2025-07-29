@@ -1,4 +1,3 @@
-import { AiOptimizer } from '@/components/ai-optimizer';
 
 export function HeroSection() {
   return (
@@ -11,7 +10,7 @@ export function HeroSection() {
           Full-Stack Developer & UI/UX Enthusiast crafting digital experiences that are out of this world.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
-          <AiOptimizer />
+          
           <a href="#projects" className="font-semibold leading-6 text-primary-foreground group">
             View My Work <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">→</span>
           </a>
