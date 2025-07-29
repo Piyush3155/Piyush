@@ -71,7 +71,7 @@ export function SkillsSection() {
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Technical Universe</h2>
           <p className="mt-4 text-lg text-muted-foreground">A constellation of my skills and technologies.</p>
         </div>
-        <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+        <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear_gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
             <SkillsList />
             <SkillsList isDuplicate />
         </div>
