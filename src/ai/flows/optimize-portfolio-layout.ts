@@ -9,7 +9,7 @@
  */
 
 import {ai} from '@/ai/genkit';
-import {z} from 'genkit';
+import {z} from 'zod';
 
 const OptimizePortfolioLayoutInputSchema = z.object({
   skills: z.array(z.string()).describe('List of skills.'),
@@ -46,11 +46,11 @@ const prompt = ai.definePrompt({
   output: {schema: OptimizePortfolioLayoutOutputSchema},
   prompt: `You are an expert portfolio optimizer. Given the following information about a user's skills, experience, projects, education, and soft skills, suggest an optimal layout and content flow for their portfolio to maximize impact.  Return the suggested order of the portfolio sections, and suggestions for the content in each section.
 
-Skills: {{skills}}
+Skills: {{#each skills}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
 Experience: {{experience}}
-Projects: {{projects}}
+Projects: {{#each projects}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
 Education: {{education}}
-Soft Skills: {{softSkills}}`,
+Soft Skills: {{#each softSkills}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}`,
 });
 
 const optimizePortfolioLayoutFlow = ai.defineFlow(
