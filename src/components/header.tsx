@@ -7,6 +7,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ThemeToggle } from './theme-toggle';
 
 export function AppHeader() {
   const navLinks = [
@@ -50,6 +51,7 @@ export function AppHeader() {
                 ))}
               </nav>
               <AiOptimizer />
+              <ThemeToggle />
           </div>
           <div className="sm:hidden">
             <Sheet>
@@ -72,6 +74,9 @@ export function AppHeader() {
                   ))}
                   <div className="mt-4">
                     <AiOptimizer />
+                  </div>
+                   <div className="mt-4">
+                    <ThemeToggle />
                   </div>
                 </nav>
               </SheetContent>
