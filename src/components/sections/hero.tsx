@@ -5,15 +5,16 @@ export function HeroSection() {
     <section id="hero" className="py-20 sm:py-32 md:py-40">
       <div className="container mx-auto text-center">
         <Image
-          src="https://placehold.co/128x128.png"
+          src="/piyush.jpeg"
           alt="Piyush"
           width={128}
           height={128}
           data-ai-hint="profile picture"
           className="rounded-full mx-auto mb-8 border-4 border-accent shadow-lg"
+          style={{ fontFamily: 'var(--font-spacecraft)' }}
         />
         <h1 className="font-headline text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-          Piyush
+          P I Y U S H  
         </h1>
         <p className="mt-6 text-lg leading-8 text-muted-foreground sm:text-xl max-w-2xl mx-auto">
           Full-Stack Developer & UI/UX Enthusiast crafting digital experiences that are out of this world.

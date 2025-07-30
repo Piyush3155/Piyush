@@ -22,9 +22,9 @@ const projects = [
     live: null,
     github: null,
     images: [
-        { src: 'https://placehold.co/600x400.png', alt: 'Taxi App Screenshot 1', hint: 'mobile booking' },
-        { src: 'https://placehold.co/600x400.png', alt: 'Taxi App Screenshot 2', hint: 'map interface' },
-        { src: 'https://placehold.co/600x400.png', alt: 'Taxi App Screenshot 3', hint: 'user profile' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Taxi App Screenshot 1', hint: 'mobile booking' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Taxi App Screenshot 2', hint: 'map interface' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Taxi App Screenshot 3', hint: 'user profile' },
     ],
   },
   {
@@ -35,12 +35,39 @@ const projects = [
     live: null,
     github: null,
     images: [
-        { src: 'https://placehold.co/600x400.png', alt: 'E-commerce Screenshot 1', hint: 'product page' },
-        { src: 'https://placehold.co/600x400.png', alt: 'E-commerce Screenshot 2', hint: 'shopping cart' },
-        { src: 'https://placehold.co/600x400.png', alt: 'E-commerce Screenshot 3', hint: 'checkout form' },
+      { src: 'https://placehold.co/600x400.png', alt: 'E-commerce Screenshot 1', hint: 'product page' },
+      { src: 'https://placehold.co/600x400.png', alt: 'E-commerce Screenshot 2', hint: 'shopping cart' },
+      { src: 'https://placehold.co/600x400.png', alt: 'E-commerce Screenshot 3', hint: 'checkout form' },
     ],
   },
+  {
+    title: 'Real-Time Chat Application',
+    description:
+      'A responsive chat app with live messaging using WebSockets, featuring user authentication, typing indicators, and chat history persistence.',
+    tags: ['Next.js', 'TypeScript', 'Socket.IO', 'Tailwind CSS', 'Node.js'],
+    live: null,
+    github: 'https://github.com/piyush3155/realtime-chat-app',
+    images: [
+      { src: 'https://placehold.co/600x400.png', alt: 'Chat App Screenshot 1', hint: 'live chat UI' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Chat App Screenshot 2', hint: 'authentication flow' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Chat App Screenshot 3', hint: 'typing indicator' },
+    ],
+  },
+  {
+    title: 'AI-Powered Resume Analyzer',
+    description:
+      'A smart web tool that evaluates resumes against job descriptions using NLP, keyword extraction, and scoring. Built with Next.js frontend and a Python backend powered by OpenAI and FastAPI.',
+    tags: ['Next.js', 'TypeScript', 'Python', 'FastAPI', 'OpenAI API', 'NLP', 'Streamlit'],
+    live: null,
+    github: 'https://github.com/piyush3155/resume-analyzer',
+    images: [
+      { src: 'https://placehold.co/600x400.png', alt: 'Resume Analyzer Screenshot 1', hint: 'input upload interface' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Resume Analyzer Screenshot 2', hint: 'keyword analysis result' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Resume Analyzer Screenshot 3', hint: 'ATS score insight' },
+    ],
+  }
 ];
+
 
 export function ProjectsSection() {
   return (

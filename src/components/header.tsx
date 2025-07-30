@@ -33,7 +33,7 @@ export function AppHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <div className="mr-4 flex items-center">
-          <a href="/" className="mr-6 flex items-center space-x-2">
+          <a href="/" className="mr-6 ml-8 flex items-center space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -49,7 +49,7 @@ export function AppHeader() {
               <path d="M2 12l10 5 10-5" />
             </svg>
             <span className="font-bold font-headline sm:inline-block">
-              OrbitalFolio
+             P I Y U S H - G U R A V
             </span>
           </a>
         </div>
