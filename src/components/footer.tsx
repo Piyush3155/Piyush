@@ -1,7 +1,6 @@
 import React from 'react';
 
 export function AppFooter() {
-  // TODO: Replace with your actual GitHub repository URL
   const githubRepoUrl = "https://github.com/piyush3155/orbitalfolio";
 
   return (
