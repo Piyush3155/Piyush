@@ -29,8 +29,8 @@ export async function sendContactEmail(formData: z.infer<typeof contactFormSchem
   // Be sure to use environment variables to store sensitive information.
   const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
         user: 'piyushgurav176@gmail.com', // generated ethereal user
         pass: 'upwd dreb flmg ywve'  // generated ethereal password
