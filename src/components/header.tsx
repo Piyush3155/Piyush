@@ -1,9 +1,8 @@
-
 'use client';
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu } from 'lucide-react';
+import { Github, Instagram, Linkedin, Menu } from 'lucide-react';
 import {
   Sheet,
   SheetContent,
@@ -49,21 +48,24 @@ export function AppHeader() {
               <path d="M2 12l10 5 10-5" />
             </svg>
             <span className="font-bold font-headline sm:inline-block">
-             P I Y U S H - G U R A V
+              P I Y U S H - G U R A V
             </span>
           </a>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
-           <div className="hidden sm:flex items-center gap-4">
-              <nav className="flex items-center space-x-2">
-                {navLinks.map((link) => (
-                  <Button key={link.href} variant="ghost" asChild>
-                    <a href={link.href}>{link.name}</a>
-                  </Button>
-                ))}
-              </nav>
-              <ThemeToggle />
+          {/* Desktop Navigation */}
+          <div className="hidden sm:flex items-center gap-4">
+            <nav className="flex items-center space-x-2">
+              {navLinks.map((link) => (
+                <Button key={link.href} variant="ghost" asChild>
+                  <a href={link.href}>{link.name}</a>
+                </Button>
+              ))}
+            </nav>
+            <ThemeToggle />
           </div>
+
+          {/* Mobile Navigation */}
           <div className="sm:hidden">
             <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
@@ -79,7 +81,10 @@ export function AppHeader() {
                     Explore the sections of my portfolio.
                   </SheetDescription>
                 </SheetHeader>
+
                 <Separator className="my-4" />
+
+                {/* Nav Links */}
                 <nav className="grid gap-4 py-2">
                   {navLinks.map((link) => (
                     <a
@@ -92,9 +97,40 @@ export function AppHeader() {
                     </a>
                   ))}
                 </nav>
+
                 <Separator className="my-4" />
+
+                {/* Theme Toggle */}
                 <div className="grid gap-4 py-2">
-                    <ThemeToggle />
+                  <ThemeToggle />
+                </div>
+
+                {/* Social Links */}
+                <div className="flex justify-center gap-6 mt-6">
+                  <a
+                    href="https://instagram.com/09_piyush_02"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-muted-foreground hover:text-accent transition-colors"
+                  >
+                    <Instagram size={20} />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/piyush-gurav-674409262/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-muted-foreground hover:text-accent transition-colors"
+                  >
+                    <Linkedin size={20} />
+                  </a>
+                  <a
+                    href="https://github.com/piyush3155"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-muted-foreground hover:text-accent transition-colors"
+                  >
+                    <Github size={20} />
+                  </a>
                 </div>
               </SheetContent>
             </Sheet>

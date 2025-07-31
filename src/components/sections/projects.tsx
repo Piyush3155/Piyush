@@ -9,9 +9,11 @@ const projects = [
     live: 'https://biteandco.vercel.app',
     github: 'https://github.com/piyush3155/rms',
     images: [
-      { src: 'https://placehold.co/600x400.png', alt: 'Restaurant Management System Screenshot 1', hint: 'dashboard analytics' },
-      { src: 'https://placehold.co/600x400.png', alt: 'Restaurant Management System Screenshot 2', hint: 'order tracking' },
-      { src: 'https://placehold.co/600x400.png', alt: 'Restaurant Management System Screenshot 3', hint: 'menu management' },
+      { src: '/rms1.png', alt: 'Restaurant Management System Screenshot 1', hint: 'dashboard analytics' },
+      { src: '/rms2.png', alt: 'Restaurant Management System Screenshot 2', hint: 'order tracking' },
+      { src: '/rms3.png', alt: 'Restaurant Management System Screenshot 3', hint: 'menu management' },
+      { src: '/rms4.png', alt: 'Restaurant Management System Screenshot 3', hint: 'menu management' },
+
     ],
   },
   {

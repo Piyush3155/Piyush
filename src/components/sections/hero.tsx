@@ -7,10 +7,10 @@ export function HeroSection() {
         <Image
           src="/piyush.jpeg"
           alt="Piyush"
-          width={128}
-          height={128}
+          width={172}
+          height={172}
           data-ai-hint="profile picture"
-          className="rounded-full mx-auto mb-8 border-4 border-accent shadow-lg"
+          className="rounded-full mx-auto mb-8 border-2 border-accent shadow-lg w-100"
           style={{ fontFamily: 'var(--font-spacecraft)' }}
         />
         <h1 className="font-headline text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl md:text-6xl lg:text-7xl">
