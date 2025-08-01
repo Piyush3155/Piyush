@@ -7,41 +7,44 @@ body {
 }
 
 @layer base {
-:root {
-    --background: 0 0% 98%;              /* Very light gray */
-    --foreground: 230 15% 20%;           /* Dark bluish-gray text */
-    --card: 0 0% 100%;                   /* White cards */
-    --card-foreground: 230 15% 20%;      /* Card text color */
+  :root {
+    --background: 245 60% 98%;              /* Light bluish background */
+    --foreground: 222 47% 11%;              /* Dark navy text */
+
+    --card: 0 0% 100%;                      /* Pure white cards */
+    --card-foreground: 222 47% 11%;
+
     --popover: 0 0% 100%;
-    --popover-foreground: 230 15% 20%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 259 80% 60%;              /* Vivid violet */
-    --primary-foreground: 0 0% 100%;     /* White text on primary */
+    --primary: 220 90% 56%;                 /* Bright blue */
+    --primary-foreground: 0 0% 100%;        /* White on blue */
 
-    --secondary: 230 20% 95%;            /* Soft gray-blue background */
-    --secondary-foreground: 230 15% 20%;
+    --secondary: 240 33% 97%;               /* Very light lavender */
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 230 20% 90%;                /* Very soft gray-blue */
-    --muted-foreground: 230 10% 40%;
+    --muted: 240 20% 94%;                   /* Subtle gray-lavender */
+    --muted-foreground: 235 15% 40%;        /* Medium gray text */
 
-    --accent: 220 70% 70%;               /* Bright blue accent */
+    --accent: 300 70% 60%;                  /* Vivid violet accent */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 85% 55%;               /* Bright red for errors */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 230 15% 85%;               /* Light border */
-    --input: 230 15% 85%;                /* Input background */
-    --ring: 259 80% 70%;
+    --border: 220 15% 88%;                  /* Light gray-blue border */
+    --input: 220 15% 88%;
+    --ring: 220 90% 70%;                    /* Bright blue ring */
 
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --chart-1: 340 82% 60%;                 /* Pinkish red */
+    --chart-2: 158 65% 52%;                 /* Teal green */
+    --chart-3: 45 92% 55%;                  /* Golden yellow */
+    --chart-4: 275 70% 65%;                 /* Soft purple */
+    --chart-5: 200 80% 60%;                 /* Sky blue */
 
     --radius: 0.5rem;
   }
+
   .dark {
     --background: gray;
     --foreground: 210 40% 98%;
