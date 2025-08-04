@@ -54,9 +54,6 @@ export function ProjectCard({
       });
     }, [api]);
   
-    const scaleFactor = 0.2;
-    const rotateFactor = -15;
-
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         if (!cardRef.current) return;
         const { left, top, width, height } = cardRef.current.getBoundingClientRect();
@@ -82,54 +79,30 @@ export function ProjectCard({
         <Card className="flex flex-col flex-grow bg-card/50 backdrop-blur-sm border-border/50">
             <CardHeader>
                 <CardTitle className="font-headline text-xl">{title}</CardTitle>
-                <CardDescription className="mt-2">{description}</CardDescription>
+                <CardDescription>{description}</CardDescription>
             </CardHeader>
-            <CardContent className="flex-grow">
-                <div className="relative w-full max-w-lg mx-auto mb-4">
-                    <Carousel setApi={setApi} className="w-full embla" opts={{ loop: true, align: 'center' }}>
-                        <CarouselContent className="-ml-4 embla__container">
-                        {images.map((image, index) => {
-                            const slideApi = api?.slideNodes()[index];
-                            let scale = 1;
-                            let rotateY = 0;
-
-                            if (slideApi && api) {
-                                const selectedIndex = api.selectedScrollSnap();
-                                const diff = index - selectedIndex;
-                                const progress = api.scrollProgress();
-                                
-                                if (Math.abs(diff) <= 1) {
-                                    const position = diff + (progress - selectedIndex);
-                                    scale = 1 - Math.abs(position) * scaleFactor;
-                                    rotateY = position * rotateFactor;
-                                } else if (diff > 1) {
-                                    scale = 1 - scaleFactor;
-                                    rotateY = rotateFactor;
-                                } else {
-                                    scale = 1- scaleFactor;
-                                    rotateY = -rotateFactor;
-                                }
-                            }
-
-                            return (
-                                <CarouselItem key={index} className="pl-8 sm:pl-12 md:pl-16 embla__slide">
-                                    <div className="p-1">
-                                        <Card className="overflow-hidden shadow-lg border-accent/20 bg-transparent" style={{ transform: `scale(${scale}) rotateY(${rotateY}deg)`}}>
-                                            <CardContent className="p-0">
-                                                <Image
-                                                src={image.src}
-                                                alt={image.alt}
-                                                data-ai-hint={image.hint}
-                                                width={600}
-                                                height={400}
-                                                className="aspect-[3/2] w-full object-cover"
-                                                />
-                                            </CardContent>
-                                        </Card>
-                                    </div>
-                                </CarouselItem>
-                            );
-                        })}
+            <CardContent className="flex-grow flex flex-col">
+                <div className="relative w-full max-w-lg mx-auto mb-4 mt-auto">
+                    <Carousel setApi={setApi} className="w-full" opts={{ loop: true }}>
+                        <CarouselContent className="-ml-4">
+                        {images.map((image, index) => (
+                            <CarouselItem key={index} className="pl-4">
+                                <div className="p-1">
+                                    <Card className="overflow-hidden shadow-lg border-accent/20 bg-transparent">
+                                        <CardContent className="p-0">
+                                            <Image
+                                            src={image.src}
+                                            alt={image.alt}
+                                            data-ai-hint={image.hint}
+                                            width={600}
+                                            height={400}
+                                            className="aspect-[3/2] w-full object-fit cover transition-transform duration-300 ease-in-out hover:scale-105 p-4 border border-accent/20 rounded-lg"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                            </CarouselItem>
+                        ))}
                         </CarouselContent>
                         <CarouselPrevious className="left-[-1rem] sm:left-0 text-accent" />
                         <CarouselNext className="right-[-1rem] sm:right-0 text-accent" />
@@ -139,7 +112,7 @@ export function ProjectCard({
                     </div>
                 </div>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-4">
                     {tags.map((tag) => (
                     <Badge key={tag} variant="secondary" className="bg-primary/50 text-primary-foreground">
                         {tag}

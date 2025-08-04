@@ -18,8 +18,9 @@ import {
   SiGit,
   SiGithub,
   SiVercel,
+  SiPostman,
 } from 'react-icons/si';
-
+import { VscVscode } from "react-icons/vsc";
 const skills = [
   { name: 'HTML', icon: <SiHtml5 /> },
   { name: 'CSS', icon: <SiCss3 /> },
@@ -37,7 +38,8 @@ const skills = [
   { name: 'Git', icon: <SiGit /> },
   { name: 'GitHub', icon: <SiGithub /> },
   { name: 'Vercel', icon: <SiVercel /> },
-  
+  { name: 'Postman', icon: <SiPostman /> },
+  { name: 'VS Code', icon: <VscVscode /> },
 ];
 
 const SkillsListContent = () => (
