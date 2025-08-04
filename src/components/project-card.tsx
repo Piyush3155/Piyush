@@ -96,7 +96,7 @@ export function ProjectCard({
                                             data-ai-hint={image.hint}
                                             width={600}
                                             height={400}
-                                            className="aspect-[3/2] w-full object-fit cover transition-transform duration-300 ease-in-out hover:scale-105 p-4 border border-accent/20 rounded-lg"
+                                            className="aspect-[3/2] w-full object-contain cover transition-transform duration-300 ease-in-out hover:scale-105 p-2 border border-accent/20 rounded-lg"
                                             />
                                         </CardContent>
                                     </Card>
