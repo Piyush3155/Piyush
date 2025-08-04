@@ -16,7 +16,7 @@ const projects = [
 
     ],
   },
-  {
+  /* {
     title: 'TAXI BOOKING APPLICATION DESIGN',
     description:
       'Designed a visually appealing and user-friendly taxi booking app prototype with 10+ interactive screens to enhance user engagement.',
@@ -28,18 +28,22 @@ const projects = [
       { src: 'https://placehold.co/600x400.png', alt: 'Taxi App Screenshot 2', hint: 'map interface' },
       { src: 'https://placehold.co/600x400.png', alt: 'Taxi App Screenshot 3', hint: 'user profile' },
     ],
-  },
+  }, */
   {
     title: 'E-COMMERCE WEBSITE',
     description:
       'A foundational e-commerce site with core features like user registration, login, and product listings, built with fundamental web technologies.',
     tags: ['HTML', 'CSS', 'JavaScript'],
-    live: null,
-    github: null,
+   live: 'https://mbagritech.vercel.app/',
+    github: 'https://github.com/piyush3155/E-commerce',
     images: [
-      { src: 'https://placehold.co/600x400.png', alt: 'E-commerce Screenshot 1', hint: 'product page' },
-      { src: 'https://placehold.co/600x400.png', alt: 'E-commerce Screenshot 2', hint: 'shopping cart' },
-      { src: 'https://placehold.co/600x400.png', alt: 'E-commerce Screenshot 3', hint: 'checkout form' },
+      { src: '/mb1.png', alt: 'E-commerce Screenshot 1', hint: 'Signin page' },
+      { src: '/mb2.png', alt: 'E-commerce Screenshot 2', hint: 'Product listing' },
+      { src: '/mb3.png', alt: 'E-commerce Screenshot 3', hint: 'Cart page' },
+      { src: '/mb4.png', alt: 'E-commerce Screenshot 4', hint: 'Checkout page' },
+      { src: '/m5.png', alt: 'E-commerce Screenshot 4', hint: 'Checkout page' },
+      { src: '/m6.png', alt: 'E-commerce Screenshot 4', hint: 'Checkout page' },
+      
     ],
   },
   {
