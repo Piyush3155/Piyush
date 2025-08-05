@@ -1,13 +1,8 @@
-
 'use server';
 
 
 import * as z from 'zod';
 import nodemailer from 'nodemailer';
-
-// Hardcoded data based on the user prompt
-
-
 
 const contactFormSchema = z.object({
   name: z.string(),
@@ -24,33 +19,38 @@ export async function sendContactEmail(formData: z.infer<typeof contactFormSchem
 
   const { name, email, message } = parsedData.data;
 
-  // IMPORTANT: You must configure your own email transport.
-  // This example uses Ethereal, which is a fake SMTP service for testing.
-  // To send real emails, you would replace this with your email provider's settings.
-  // For example, for Gmail, you would use 'smtp.gmail.com' and your credentials.
-  // Be sure to use environment variables to store sensitive information.
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
-    port: 587,
-    secure: false, // true for 465, false for other ports
-    auth: {
-        user: 'maddison53@ethereal.email', // generated ethereal user
-        pass: 'jn7jnAPss4f63QBp6D'  // generated ethereal password
-    }
-  });
-
   try {
-    const info = await transporter.sendMail({
-      from: `"${name}" <${email}>`, // sender address
-      to: "your-email@example.com", // List of receivers. Replace with your email.
-      subject: `New message from ${name} via portfolio`, // Subject line
-      text: message, // plain text body
-      html: `<b>From:</b> ${name} (${email})<br/><b>Message:</b><p>${message}</p>`, // html body
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.GMAIL_USER, // Gmail address from env variable
+        pass: process.env.GMAIL_PASS, // Gmail app password from env variable
+      },
     });
 
-    console.log("Message sent: %s", info.messageId);
-    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    
+    // Send message to your email
+    await transporter.sendMail({
+      from: `"${name}" <${email}>`, // user's name and email as sender
+      to: 'piyushgurav176@gmail.com', // your receiving email
+      replyTo: email, // user's email from frontend
+      subject: `New Contact Message from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      html: `<p><strong>Name:</strong> ${name}</p>
+             <p><strong>Email:</strong> ${email}</p>
+             <p><strong>Message:</strong><br/>${message}</p>`,
+    });
+
+    // Send confirmation email to user
+    await transporter.sendMail({
+      from: `"Piyush Gurav" <${process.env.GMAIL_USER}>`, // your name and email
+      to: email, // user's email
+      subject: "Thank you for contacting me!",
+      text: `Hi ${name},\n\nI have received your message and will be in touch with you very soon.\n\nBest regards,\nPiyush Gurav`,
+      html: `<p>Hi ${name},</p>
+             <p>I have received your message and will be in touch with you very soon.</p>
+             <p>Best regards,<br/>Piyush Gurav</p>`,
+    });
+
     return { success: true };
   } catch (error) {
     console.error("Error sending email:", error);
