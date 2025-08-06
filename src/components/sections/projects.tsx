@@ -52,11 +52,12 @@ const projects = [
       'A responsive chat app with live messaging using WebSockets, featuring user authentication, typing indicators, and chat history persistence.',
     tags: ['Next.js', 'TypeScript', 'Socket.IO', 'Tailwind CSS', 'Node.js'],
     live: null,
-    github: 'https://github.com/piyush3155/realtime-chat-app',
+    github: 'https://github.com/Piyush3155/chatapplication',
     images: [
-      { src: 'https://placehold.co/600x400.png', alt: 'Chat App Screenshot 1', hint: 'live chat UI' },
-      { src: 'https://placehold.co/600x400.png', alt: 'Chat App Screenshot 2', hint: 'authentication flow' },
-      { src: 'https://placehold.co/600x400.png', alt: 'Chat App Screenshot 3', hint: 'typing indicator' },
+      { src: '/chat1.png', alt: 'Chat App Screenshot 1', hint: 'live chat UI' },
+      { src: '/chat2.png', alt: 'Chat App Screenshot 2', hint: 'authentication flow' },
+      { src: '/chat3.png', alt: 'Chat App Screenshot 3', hint: 'typing indicator' },
+      { src: '/chat4.png', alt: 'Chat App Screenshot 4', hint: 'chat history' },
     ],
   },
   {
@@ -67,9 +68,9 @@ const projects = [
     live: null,
     github: 'https://github.com/piyush3155/resume-analyzer',
     images: [
-      { src: 'https://placehold.co/600x400.png', alt: 'Resume Analyzer Screenshot 1', hint: 'input upload interface' },
-      { src: 'https://placehold.co/600x400.png', alt: 'Resume Analyzer Screenshot 2', hint: 'keyword analysis result' },
-      { src: 'https://placehold.co/600x400.png', alt: 'Resume Analyzer Screenshot 3', hint: 'ATS score insight' },
+      { src: '/ai1.png', alt: 'Resume Analyzer Screenshot 1', hint: 'input upload interface' },
+      { src: '/ai2.png', alt: 'Resume Analyzer Screenshot 2', hint: 'keyword analysis result' },
+      { src: '/ai3.png', alt: 'Resume Analyzer Screenshot 3', hint: 'ATS score insight' },
     ],
   }
 ];
