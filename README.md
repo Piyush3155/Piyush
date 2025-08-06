@@ -1,57 +1,118 @@
-# Portfolio
+# Piyush Gurav - Portfolio
 
-This is an interactive 3D portfolio website designed to showcase projects and skills in a unique, space-themed environment. It is built with modern web technologies to be performant, responsive, and visually engaging.
+A modern, responsive portfolio website showcasing my journey as a Full-Stack Developer. Built with cutting-edge technologies and featuring a clean, professional design with interactive elements.
+
+**🌐 Live Website**: [piyushgurav.me](https://piyushgurav.me)
 
 ## Features
 
-- **Interactive 3D Space**: A captivating 3D background created with Three.js.
-- **Responsive Design**: Looks great on all devices, from mobile phones to desktops.
-- **Animated Sections**: Smooth fade-in animations on scroll for a dynamic user experience.
-- **Modern Tech Stack**: Built with Next.js, React, and Tailwind CSS.
-- **ShadCN UI Components**: Utilizes a set of beautifully designed and accessible UI components.
+- **Responsive Design**: Optimized for all devices, from mobile to desktop
+- **Interactive Contact Form**: Functional email integration with automated responses
+- **Animated Sections**: Smooth scroll animations and hover effects
+- **Project Showcase**: Interactive project cards with image carousels
+- **Skills Animation**: Infinite scrolling tech stack display
+- **Theme Support**: Light and dark mode toggle
+- **3D Card Effects**: Interactive project cards with 3D transformations
+- **Custom Domain**: Hosted on custom domain via Namecheap
 
 ## Tech Stack
 
-- **Framework**: [Next.js](https://nextjs.org/)
-- **Library**: [React](https://reactjs.org/)
+- **Framework**: [Next.js 14](https://nextjs.org/) with App Router
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components**: [ShadCN UI](https://ui.shadcn.com/)
-- **3D Graphics**: [Three.js](https://threejs.org/)
+- **Email**: [Nodemailer](https://nodemailer.com/) with Gmail SMTP
+- **Form Handling**: [React Hook Form](https://react-hook-form.com/) with Zod validation
+- **Icons**: [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)
+- **Hosting**: [Vercel](https://vercel.com/)
+- **Domain**: [Namecheap](https://namecheap.com/)
 
 ## Getting Started
 
-To get a local copy up and running, follow these simple steps.
-
 ### Prerequisites
 
-Make sure you have [Node.js](https://nodejs.org/) (version 18 or higher) and npm installed on your machine.
-
-### Cloning the Repository
-
-1.  First, clone the repository to your local machine. Replace `your-username/orbitalfolio` with your actual GitHub repository path.
-    ```bash
-    git clone https://github.com/your-username/orbitalfolio.git
-    ```
-2.  Navigate into the project directory:
-    ```bash
-    cd orbitalfolio
-    ```
+- [Node.js](https://nodejs.org/) (version 18 or higher)
+- npm or yarn package manager
 
 ### Installation
 
-Install the necessary npm packages by running the following command:
-```bash
-npm install
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/piyush3155/piyush-portfolio.git
+   cd piyush-portfolio
+   ```
 
-### Running the Development Server
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-To start the development server, run:
-```bash
-npm run dev
+3. Create environment variables:
+   ```bash
+   # Create .env file in the root directory
+   GMAIL_USER=your-email@gmail.com
+   GMAIL_PASS=your-app-password
+   ```
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Email Configuration
+
+To enable the contact form functionality:
+
+1. Enable 2-Step Verification in your Google Account
+2. Generate an App Password for Gmail
+3. Add your credentials to the `.env` file
+4. The contact form will send emails to your specified address and auto-reply to users
+
+## Project Structure
+
 ```
-Open [http://localhost:9002](http://localhost:9002) (or the port specified in your console) in your browser to see your portfolio in action. The application will automatically reload if you make any changes to the code.
+src/
+├── app/                    # Next.js App Router
+│   ├── actions.ts         # Server actions for email
+│   └── globals.css        # Global styles
+├── components/
+│   ├── sections/          # Page sections
+│   ├── ui/               # ShadCN UI components
+│   └── ...               # Other components
+└── ...
+```
 
 ## Deployment
 
-This project is ready to be deployed on any platform that supports Next.js, such as [Vercel](https://vercel.com/) or [Firebase App Hosting](https://firebase.google.com/docs/app-hosting).
+This portfolio is deployed on Vercel with a custom domain from Namecheap:
+
+1. **Vercel Deployment**: Push your code to GitHub and connect to Vercel
+2. **Custom Domain Setup**: 
+   - Purchase domain from Namecheap (piyushgurav.me)
+   - Configure DNS settings in Namecheap to point to Vercel
+   - Add custom domain in Vercel dashboard
+3. **Environment Variables**: Add email credentials in Vercel dashboard
+4. **Automatic Deployments**: Every push to main branch triggers deployment
+
+### Domain Configuration
+- **Domain Provider**: Namecheap
+- **DNS Management**: Configured to point to Vercel's servers
+- **SSL Certificate**: Automatically managed by Vercel
+
+## Contact
+
+- **Website**: [piyushgurav.me](https://piyushgurav.me)
+- **Email**: piyushgurav176@gmail.com
+- **LinkedIn**: [Piyush Gurav](https://www.linkedin.com/in/piyush-gurav-674409262/)
+- **GitHub**: [piyush3155](https://github.com/piyush3155)
+- **Instagram**: [@09_piyush_02](https://instagram.com/09_piyush_02)
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
