@@ -29,10 +29,10 @@ export function AppHeader() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
-        <div className="mr-4 flex items-center">
-          <a href="/" className="mr-6 ml-8 flex items-center space-x-2">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 font-headline">
+      <div className="container flex h-14 items-center justify-between">
+        <div className="flex items-center">
+          <a href="/" className="flex items-center space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -47,27 +47,15 @@ export function AppHeader() {
               <path d="M2 17l10 5 10-5" />
               <path d="M2 12l10 5 10-5" />
             </svg>
-            <span className="font-bold font-headline sm:inline-block flex gap-4">
-              <h1>P I Y U S H   </h1>
-              <h1> G U R A V</h1>
+            <span className="font-bold font-headline">
+              <h1>P I Y U S H -  G U R A V</h1>
             </span>
           </a>
         </div>
-        <div className="flex flex-1 items-center justify-end space-x-2">
-          {/* Desktop Navigation */}
-          <div className="hidden sm:flex items-center gap-4">
-            <nav className="flex items-center space-x-2">
-              {navLinks.map((link) => (
-                <Button key={link.href} variant="ghost" asChild>
-                  <a href={link.href}>{link.name}</a>
-                </Button>
-              ))}
-            </nav>
-            <ThemeToggle />
-          </div>
-
+        
+        <div className="flex items-center space-x-2">
           {/* Mobile Navigation */}
-          <div className="sm:hidden ">
+          <div className="sm:hidden">
             <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -135,6 +123,18 @@ export function AppHeader() {
                 </div>
               </SheetContent>
             </Sheet>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden sm:flex items-center gap-4">
+            <nav className="flex items-center space-x-2">
+              {navLinks.map((link) => (
+                <Button key={link.href} variant="ghost" asChild>
+                  <a href={link.href}>{link.name}</a>
+                </Button>
+              ))}
+            </nav>
+            <ThemeToggle />
           </div>
         </div>
       </div>

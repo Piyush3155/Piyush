@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function HeroSection() {
   return (
-    <section id="hero" className="py-20 sm:py-32 md:py-40">
+    <section id="hero" className="py-20 sm:py-32 md:py-40 font-headline">
       <div className="container mx-auto text-center">
         <Image
           src="/piyush.jpeg"
