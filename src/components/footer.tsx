@@ -6,8 +6,8 @@ export function AppFooter() {
 
   return (
     <footer className="border-t border-border/40 py-6 md:py-8">
-      <div className="container flex flex-col items-center justify-center gap-4">
-        <div className="flex gap-14">
+      <div className="container flex flex-col items-center justify-center gap-4 w-full">
+        <div className="flex gap-14 justify-center">
           <a
             href="https://instagram.com/09_piyush_02"
             target="_blank"

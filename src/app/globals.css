@@ -8,39 +8,39 @@ body {
 
 @layer base {
   :root {
-    --background: 245 60% 98%;              /* Light bluish background */
-    --foreground: 222 47% 11%;              /* Dark navy text */
+    --background: 270 30% 98%;              /* Very light purple background */
+    --foreground: 270 80% 20%;              /* Dark purple text */
 
-    --card: 0 0% 100%;                      /* Pure white cards */
-    --card-foreground: 222 47% 11%;
+    --card: 270 50% 96%;                    /* Light purple cards */
+    --card-foreground: 270 80% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 270 50% 96%;
+    --popover-foreground: 270 80% 20%;
 
-    --primary: 220 90% 56%;                 /* Bright blue */
-    --primary-foreground: 0 0% 100%;        /* White on blue */
+    --primary: 262 83% 58%;                 /* Rich purple primary */
+    --primary-foreground: 270 30% 98%;     /* Light text on primary */
 
-    --secondary: 240 33% 97%;               /* Very light lavender */
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 270 40% 90%;               /* Light purple secondary */
+    --secondary-foreground: 270 60% 35%;
 
-    --muted: 240 20% 94%;                   /* Subtle gray-lavender */
-    --muted-foreground: 235 15% 40%;        /* Medium gray text */
+    --muted: 270 40% 92%;                   /* Subtle purple muted */
+    --muted-foreground: 270 40% 50%;       /* Medium purple text */
 
-    --accent: 300 70% 60%;                  /* Vivid violet accent */
-    --accent-foreground: 0 0% 100%;
+    --accent: 280 70% 65%;                  /* Bright purple accent */
+    --accent-foreground: 270 30% 98%;
 
-    --destructive: 0 85% 55%;               /* Bright red for errors */
+    --destructive: 0 84% 60%;               /* Keep red for errors */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;                  /* Light gray-blue border */
-    --input: 220 15% 88%;
-    --ring: 220 90% 70%;                    /* Bright blue ring */
+    --border: 270 30% 85%;                  /* Light purple border */
+    --input: 270 30% 85%;
+    --ring: 262 83% 58%;                    /* Purple ring */
 
-    --chart-1: 340 82% 60%;                 /* Pinkish red */
-    --chart-2: 158 65% 52%;                 /* Teal green */
-    --chart-3: 45 92% 55%;                  /* Golden yellow */
-    --chart-4: 275 70% 65%;                 /* Soft purple */
-    --chart-5: 200 80% 60%;                 /* Sky blue */
+    --chart-1: 280 70% 65%;                 /* Purple variants */
+    --chart-2: 260 60% 55%;                 
+    --chart-3: 300 65% 60%;                 
+    --chart-4: 250 70% 50%;                 
+    --chart-5: 270 75% 45%;                 
 
     --radius: 0.5rem;
   }
