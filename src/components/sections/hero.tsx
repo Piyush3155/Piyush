@@ -13,7 +13,7 @@ export function HeroSection() {
           className="rounded-full mx-auto mb-8 border-2 border-accent shadow-lg w-100"
           style={{ fontFamily: 'var(--font-spacecraft)' }}
         />
-        <h1 className="font-headline text-4xl font-bold   tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
           P I Y U S H  
         </h1>
         <p className="mt-6 text-lg leading-8 text-muted-foreground sm:text-xl max-w-2xl mx-auto">

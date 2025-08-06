@@ -47,8 +47,9 @@ export function AppHeader() {
               <path d="M2 17l10 5 10-5" />
               <path d="M2 12l10 5 10-5" />
             </svg>
-            <span className="font-bold font-headline sm:inline-block">
-              P I Y U S H - G U R A V
+            <span className="font-bold font-headline sm:inline-block flex gap-4">
+              <h1>P I Y U S H   </h1>
+              <h1> G U R A V</h1>
             </span>
           </a>
         </div>
@@ -66,7 +67,7 @@ export function AppHeader() {
           </div>
 
           {/* Mobile Navigation */}
-          <div className="sm:hidden">
+          <div className="sm:hidden ">
             <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -74,18 +75,18 @@ export function AppHeader() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right">
+              <SheetContent side="right" className="backdrop-blur-xl bg-transparent">
                 <SheetHeader>
-                  <SheetTitle>Navigation</SheetTitle>
+                  <SheetTitle>P I Y U S H</SheetTitle>
                   <SheetDescription>
-                    Explore the sections of my portfolio.
+                    Full Stack Developer
                   </SheetDescription>
                 </SheetHeader>
 
                 <Separator className="my-4" />
 
                 {/* Nav Links */}
-                <nav className="grid gap-4 py-2">
+                <nav className="grid gap-4 py-2 ">
                   {navLinks.map((link) => (
                     <a
                       key={link.href}

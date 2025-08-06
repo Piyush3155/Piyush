@@ -1,4 +1,3 @@
-
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -74,7 +73,7 @@ export function ContactSection() {
         </div>
         <Card className="max-w-2xl mx-auto bg-card/50 backdrop-blur-sm border-border/50">
             <CardHeader>
-                <CardTitle>Contact Me</CardTitle>
+                <CardTitle className="font-headline">Contact Me</CardTitle>
                 <CardDescription>Fill out the form below and I'll get back to you as soon as possible.</CardDescription>
             </CardHeader>
             <CardContent>
@@ -133,3 +132,4 @@ export function ContactSection() {
     </section>
   );
 }
+
