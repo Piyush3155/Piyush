@@ -32,7 +32,7 @@ const education = [
     icon: <GraduationCap className="h-5 w-5" />,
     degree: 'Bachelor of Computer Applications',
     institution: 'KLS Gogte of Commerce',
-    period: 'Expected - 2025',
+    period: '2022 - 2025',
     description: ['CGPA: 7.67'],
   },
 ];
