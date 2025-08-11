@@ -2,10 +2,10 @@ import React from 'react';
 import { Instagram, Linkedin, Github } from 'lucide-react';
 
 export function AppFooter() {
-  const githubRepoUrl = "https://github.com/piyush3155/piyush-portfolio";
+  const githubRepoUrl = "https://github.com/Piyush3155/Piyush";
 
   return (
-    <footer className="border-t border-border/40 py-6 md:py-8">
+    <footer className="border-t border-border/40 py-6 md:py-8 bg-transparent backdrop-blur-2xl ">
       <div className="container flex flex-col items-center justify-center gap-4 w-full">
         <div className="flex gap-14 justify-center">
           <a
