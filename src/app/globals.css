@@ -8,7 +8,7 @@ body {
 
 @layer base {
   :root {
-    --background: 270 30% 98%;              /* Very light purple background */
+    --background: 270 30% 99%;              /* Changed: Even lighter purple background */
     --foreground: 270 80% 20%;              /* Dark purple text */
 
     --card: 270 50% 96%;                    /* Light purple cards */

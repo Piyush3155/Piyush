@@ -68,7 +68,7 @@ const TimelineItem = ({ icon, title, subtitle, period, description }: { icon: Re
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="py-16 md:py-24">
+    <section id="experience" className="py-16 md:py-24" >
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">My Journey</h2>

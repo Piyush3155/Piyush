@@ -21,7 +21,7 @@ export default function Home() {
           <ContactSection />
         </div>
       </main>
-      <div className="w-full bg-background/80 backdrop-blur-sm border-t border-border/50 flex justify-center py-4">
+      <div className="w-full bg-transparent backdrop-blur-sm border-t border-border/50 flex justify-center py-4">
       <AppFooter />
       </div>
     </div>
