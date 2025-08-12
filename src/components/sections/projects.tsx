@@ -6,7 +6,7 @@ const projects = [
     description:
       'A full-stack web app to streamline restaurant operations, featuring QR-based ordering, live order tracking, role-based access, and sales analytics.',
     tags: ['Next.js', 'TypeScript', 'Prisma', 'MySQL', 'Tailwind CSS', 'Recharts'],
-    live: 'https://biteandco.vercel.app',
+    live: 'https://biteandco25.vercel.app',
     github: 'https://github.com/piyush3155/rms',
     images: [
       { src: '/rms1.png', alt: 'Restaurant Management System Screenshot 1', hint: 'dashboard analytics' },
