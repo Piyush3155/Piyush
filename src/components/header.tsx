@@ -31,7 +31,7 @@ export function AppHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 font-headline">
       <div className="container flex h-14 items-center justify-between">
-        <div className="flex items-center">
+        <div className="flex items-center m-4">
           <a href="/" className="flex items-center space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -47,8 +47,8 @@ export function AppHeader() {
               <path d="M2 17l10 5 10-5" />
               <path d="M2 12l10 5 10-5" />
             </svg>
-            <span className="font-bold font-headline">
-              <h1>P I Y U S H -  G U R A V</h1>
+            <span className="font-bold font-headline flex gap-4">
+              <h1>P I Y U S H </h1><h1>  G U R A V</h1>
             </span>
           </a>
         </div>

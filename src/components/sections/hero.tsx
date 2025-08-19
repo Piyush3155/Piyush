@@ -1,27 +1,27 @@
 import Image from 'next/image';
+import { ParticleTextEffect } from '../particle-text-effect';
+import { ShiningText } from '../ui/shining-text';
 
 export function HeroSection() {
   return (
     <section id="hero" className="py-20 sm:py-32 md:py-40 font-headline">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center flex flex-col items-center m-40 md:m-0">
         <Image
           src="/piyush.jpeg"
           alt="Piyush"
           width={172}
           height={172}
           data-ai-hint="profile picture"
-          className="rounded-full mx-auto mb-8 border-2 border-accent shadow-lg w-100"
+          className="rounded-full mx-auto mb-8 border-2 border-accent shadow-lg w-100 z-10"
           style={{ fontFamily: 'var(--font-spacecraft)' }}
         />
-        <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-          P I Y U S H  
-        </h1>
-        <p className="mt-6 text-lg leading-8 text-muted-foreground sm:text-xl max-w-2xl mx-auto">
-          Full-Stack Developer & UI/UX Enthusiast crafting digital experiences that are out of this world.
-        </p>
-        <div className="mt-10 flex items-center justify-center gap-x-6">
+
+        <div className="w-full flex justify-center mt-4 absolute top-[400px] md:top-44 md:left-0">
+          <ParticleTextEffect />
+        </div>
+        <div className="mt-10 flex items-center justify-center gap-x-6 mt-[180px] md:mt-60 z-10">
           <a href="#projects" className="font-semibold leading-6 text-primary-foreground group">
-            View My Work <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">→</span>
+           <ShiningText text={"View My Work →"}/> <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none"></span>
           </a>
         </div>
       </div>

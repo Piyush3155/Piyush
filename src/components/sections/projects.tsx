@@ -5,8 +5,8 @@ const projects = [
     title: 'Restaurant Management System',
     description:
       'A full-stack web app to streamline restaurant operations, featuring QR-based ordering, live order tracking, role-based access, and sales analytics.',
-    tags: ['Next.js', 'TypeScript', 'Prisma', 'MySQL', 'Tailwind CSS', 'Recharts'],
-    live: 'https://biteandco.vercel.app',
+    tags: ['Next.js', 'TypeScript', 'Prisma', 'MySQL', 'Tailwind CSS', 'Node.Js'],
+    live: 'https://biteandco25.vercel.app',
     github: 'https://github.com/piyush3155/rms',
     images: [
       { src: '/rms1.png', alt: 'Restaurant Management System Screenshot 1', hint: 'dashboard analytics' },
@@ -64,7 +64,7 @@ const projects = [
     title: 'AI-Powered Resume Analyzer',
     description:
       'A smart web tool that evaluates resumes against job descriptions using NLP, keyword extraction, and scoring. Built with Next.js frontend and a Python backend powered by OpenAI and FastAPI.',
-    tags: ['Next.js', 'TypeScript', 'Python', 'FastAPI', 'OpenAI API', 'NLP', 'Streamlit'],
+    tags: ['Next.js', 'TypeScript', 'Python'],
     live: null,
     github: 'https://github.com/piyush3155/resume-analyzer',
     images: [
