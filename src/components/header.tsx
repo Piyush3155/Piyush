@@ -29,7 +29,10 @@ export function AppHeader() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 font-headline">
+    <header
+      className="fixed top-4 px-4 left-1/2 -translate-x-1/2 z-[50] w-[95vw] max-w-4xl rounded-2xl border border-border/40 bg-background/80 shadow-xl backdrop-blur-2xl supports-[backdrop-filter]:bg-background/60 font-headline transition-all"
+      style={{ boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)" }}
+    >
       <div className="container flex h-14 items-center justify-between">
         <div className="flex items-center m-4">
           <a href="/" className="flex items-center space-x-2">
@@ -66,9 +69,7 @@ export function AppHeader() {
               <SheetContent side="right" className="backdrop-blur-xl bg-transparent">
                 <SheetHeader>
                   <SheetTitle>P I Y U S H</SheetTitle>
-                  <SheetDescription>
-                    Full Stack Developer
-                  </SheetDescription>
+                  
                 </SheetHeader>
 
                 <Separator className="my-4" />

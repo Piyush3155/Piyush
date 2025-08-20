@@ -16,7 +16,7 @@ export function HeroSection() {
           style={{ fontFamily: 'var(--font-spacecraft)' }}
         />
 
-        <div className="w-full flex justify-center mt-4 absolute top-[340px] md:top-44 md:left-0">
+        <div className="w-full flex justify-center mt-4 absolute top-[300px] md:top-44 md:left-0">
           <ParticleTextEffect />
         </div>
         <div className="mt-10 flex items-center justify-center gap-x-6 mt-[180px] md:mt-60 z-10">
