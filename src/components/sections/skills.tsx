@@ -21,6 +21,7 @@ import {
   SiPostman,
 } from 'react-icons/si';
 import { VscVscode } from "react-icons/vsc";
+import { IconCloud } from '../ui/interactive-icon-cloud';
 const skills = [
   { name: 'HTML', icon: <SiHtml5 /> },
   { name: 'CSS', icon: <SiCss3 /> },
@@ -41,6 +42,29 @@ const skills = [
   { name: 'Postman', icon: <SiPostman /> },
   { name: 'VS Code', icon: <VscVscode /> },
 ];
+
+
+const slugs = [
+  "typescript",
+  "javascript",
+  "react",
+  "html5",
+  "css3",
+  "express",
+  "prisma",
+  "vercel",
+  "git",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "figma",
+  "postman",
+  "tailwindcss",
+  "nestjs",
+  "python",
+  "php",
+  "bootstrap"
+]
 
 const SkillsListContent = () => (
   <>
@@ -73,8 +97,10 @@ export function SkillsSection() {
             <SkillsListContent />
             <SkillsListContent />
           </ul>
-        </div>
+          
       </div>
+      {/* <IconCloud iconSlugs={slugs} /> */}
+        </div>
     </section>
   );
 }

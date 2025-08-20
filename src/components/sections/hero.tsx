@@ -5,7 +5,7 @@ import { ShiningText } from '../ui/shining-text';
 export function HeroSection() {
   return (
     <section id="hero" className="py-20 sm:py-32 md:py-40 font-headline">
-      <div className="container mx-auto text-center flex flex-col items-center m-40 md:m-0">
+      <div className="container mx-auto text-center flex flex-col items-center m-26 md:m-0">
         <Image
           src="/piyush.jpeg"
           alt="Piyush"
@@ -16,7 +16,7 @@ export function HeroSection() {
           style={{ fontFamily: 'var(--font-spacecraft)' }}
         />
 
-        <div className="w-full flex justify-center mt-4 absolute top-[400px] md:top-44 md:left-0">
+        <div className="w-full flex justify-center mt-4 absolute top-[340px] md:top-44 md:left-0">
           <ParticleTextEffect />
         </div>
         <div className="mt-10 flex items-center justify-center gap-x-6 mt-[180px] md:mt-60 z-10">
