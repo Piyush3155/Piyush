@@ -19,6 +19,7 @@ import {
   SiGithub,
   SiVercel,
   SiPostman,
+  SiPython,
 } from 'react-icons/si';
 import { VscVscode } from "react-icons/vsc";
 import { IconCloud } from '../ui/interactive-icon-cloud';
@@ -41,6 +42,7 @@ const skills = [
   { name: 'Vercel', icon: <SiVercel /> },
   { name: 'Postman', icon: <SiPostman /> },
   { name: 'VS Code', icon: <VscVscode /> },
+  { name: 'Python', icon: <SiPython /> },
 ];
 
 
