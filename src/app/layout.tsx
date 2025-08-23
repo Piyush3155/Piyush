@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { ThemeProvider } from '@/components/theme-provider';
 import localFont from 'next/font/local';
-
+import { Analytics } from "@vercel/analytics/react"
 // Metadata
 export const metadata: Metadata = {
   title: 'PIYUSH GURAV',
@@ -72,6 +72,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+           <Analytics />
           <Toaster />
         </ThemeProvider>
       </body>
