@@ -6,10 +6,12 @@ import { SkillsSection } from '@/components/sections/skills';
 import { ExperienceSection } from '@/components/sections/experience';
 import { ProjectsSection } from '@/components/sections/projects';
 import { ContactSection } from '@/components/sections/contact';
+import { ScrollProgressBar } from '@/components/scroll-progress-bar';
 
 export default function Home() {
   return (
     <div className="relative flex flex-col min-h-screen">
+      <ScrollProgressBar />
       <ThreeDSpace />
       <AppHeader />
       <main className="flex-grow">
