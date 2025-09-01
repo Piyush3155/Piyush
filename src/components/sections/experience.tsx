@@ -10,7 +10,7 @@ const experience = [
     period: 'August 2025 - Present',
     description: [
       'Continuing to build and maintain full-stack web applications.',
-      'Leading development on new features and mentoring junior developers.',
+      'Collaborating with teams members to deliver new features.',
       'Focusing on performance optimization and scalability.'
     ],
   },
