@@ -36,7 +36,8 @@ export function AppHeader() {
       <div className="container flex h-14 items-center justify-between">
         <div className="flex items-center m-4">
           <a href="/" className="flex items-center space-x-2">
-            <svg
+           </>
+            {/*  <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
@@ -49,7 +50,7 @@ export function AppHeader() {
               <path d="M12 2L2 7l10 5 10-5-10-5z" />
               <path d="M2 17l10 5 10-5" />
               <path d="M2 12l10 5 10-5" />
-            </svg>
+            </svg> */}
             <span className="font-bold font-headline flex gap-4">
               <h1>P I Y U S H </h1><h1>  G U R A V</h1>
             </span>
