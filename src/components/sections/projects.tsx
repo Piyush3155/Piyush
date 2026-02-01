@@ -16,6 +16,21 @@ const projects = [
 
     ],
   },
+  {
+    title:'Civil Desk',
+    description:
+      'A comprehensive platform for civil engineering professionals, offering project management, resource planning, and collaboration tools to streamline workflows and enhance productivity.',
+    tags: ['Next.js','NestJS','Prisma','PostgreSQL','Firebase','TanStack Query', 'TypeScript',  'Tailwind CSS'],
+    live: 'https://civildesk.vercel.app/',
+    github: 'https://github.com/piyush3155/civil',
+     images: [
+      { src: '/civil1.png', alt: 'Civil Desk Screenshot 1', hint: 'Login Page' },
+      { src: '/civil2.png', alt: 'Civil Desk Screenshot 2', hint: 'Dashboard' },
+      { src: '/civil3.png', alt: 'Civil Desk Screenshot 3', hint: 'Projects' },
+      { src: '/civil4.png', alt: 'Civil Desk Screenshot 4', hint: 'FCM ' },
+
+    ],
+  },
   /* {
     title: 'TAXI BOOKING APPLICATION DESIGN',
     description:
